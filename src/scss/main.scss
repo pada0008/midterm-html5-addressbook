@@ -1,0 +1,91 @@
+$primary-color: blue;
+$main-bg: #00aa83;
+$secondary-bg: rgba(182, 182, 182, 0.4);
+
+
+h1 {
+  color: $primary-color;
+}
+
+ main{
+  display: block;
+  width: 100%;
+   padding: 0;
+
+}
+
+header{
+  @extend main;
+  border-bottom: 2px solid $primary-color;
+  background: $secondary-bg;
+
+}
+
+.section{
+  width: 100%;
+
+  .list {
+    display: inline-block;
+    width: 30%;
+    border-right: 2px solid $main-bg;
+
+    height:39em;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    ul {
+      list-style: none;
+      width: 100%;
+      display: block;
+      padding: 0;
+      margin: 0;
+    }
+
+    li{
+      display: block;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+      figure{
+        margin-left: 0;
+      }
+    }
+
+  }
+  .details{
+    vertical-align: top;
+    display: inline-block;
+    width: 65%;
+    padding:0 2%;
+
+    figure{
+      float: right;
+      margin: 0;
+      padding: 0;
+      -webkit-margin-before: 0;
+      -webkit-margin-after: 0;
+      -webkit-margin-start: 0;
+      -webkit-margin-end: 0;
+    }
+
+    .address{
+      padding: 1em 0;
+      border-top: 2px solid $main-bg;
+      border-bottom: 2px solid $main-bg;
+    }
+  }
+
+  &:after{
+    clear: both;
+  }
+
+}
+
+
+footer{
+  @extend main;
+  border-top: 2px solid $primary-color;
+  background: $secondary-bg;
+}
+
+
